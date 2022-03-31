@@ -1,0 +1,8 @@
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100px;
+}
+[class^="col"] { /* wild card eli mikä class joka alkaa col */
+    border: 1px solid black;
+    background-color: aquamarine;
+}
