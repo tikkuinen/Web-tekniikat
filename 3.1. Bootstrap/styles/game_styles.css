@@ -1,0 +1,183 @@
+/* Taustakuvan muotoilut */
+body {
+    background-color: #CFE694;
+    background-image: url(../images/tiia/background.jpg);
+    background-blend-mode: luminosity;
+}
+
+/* Tekstit, joissa ulkoinen fontti */
+h1 {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+div, footer {
+    font-family:  'Raleway', sans-serif;
+    color: black;
+    /* font-weight: bold;  */
+}
+
+/* Pääboksin muotoilut */
+.container {
+    height: 80vh;
+    background-color: #CFE694;
+    margin-top: 30px;
+    border-radius: 30px;
+    border: 1px solid #5f6851;
+}
+
+/* Yläosa eli ohjekenttä, kysymyskenttä ja tuloskuva */
+#instructions {
+    text-align: center;
+    padding: 20px;
+}
+
+#question {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 1.2em;
+}
+
+#image-box {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 4px;
+}
+
+/* Vastausosion muotoilu  */
+#answer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#answer-field {
+    border-radius: 15px;
+}
+
+/* Laskurin sijoitus oikealle */
+#counter-section {
+    text-align: right;
+}
+
+/* Nappiosion muotoilut */
+#buttons {
+    display: flex;
+    gap: 20px;
+}
+
+#start, #check, #next, #again {
+    margin-top: 40px;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    text-transform: uppercase;
+    border-radius: 15px;
+}
+
+#start {
+    min-width: 75%;
+}
+
+#again {
+    margin-top: 10px;
+}
+
+/* Tulossivun muotoilut */
+#result-box {
+    padding-bottom: 20px;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#result-text {
+    text-align: center;
+    font-weight: bold;
+}
+
+#result-text span {
+    font-size: 1.5em;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+/* Virhekentän muotoilut */
+.error {
+    background-color: lightcoral;
+    border: 1px solid red;
+    border-radius: 15px;
+}
+
+.error span {
+    padding: 5px;
+}
+
+/* Kuvien muotoilut, tarkistuskuva ja tuloskuva */
+#answer-image img {
+    height: 50px;
+    width: auto;
+    margin-top: 10px;
+}
+
+#result-img img {
+    height: 125px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+/* Tekstikenttien yhteiset muotoilut */
+#instructions, #question, #result {
+    background-color: #FCFA95;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+
+/* Omat responsiviisuusmuotoilut */
+@media screen and (max-width: 1300px) {
+    footer {
+        height: 30px;
+    }
+
+    .container {
+        margin-top: 15px;
+    }
+
+    #check, #next {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        height: 25px;
+    }
+
+    .container {
+        margin-top: 0px;
+        height: 100vh;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    #check, #next {
+        margin-top: 20px;
+    }
+}
