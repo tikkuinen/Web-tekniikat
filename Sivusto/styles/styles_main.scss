@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: aqua !important;
+}
+
+// sivun koko korkeus
+.container:nth-child(2) {
+    background-color: green;
+    height: 100vh;
+    height: calc(100vh - 58px); // vähän epäilyttävä korjaus, en tiedä teenkö
+    
+}
+
+// taustaväri tai kuva
+body {
+    background-color: green;
+}
+
+.container .row:last-child {
+    
+}
+
+p {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+
+
+// wild-card bordereille
+// div[class*="col"], p {
+//     border: 1px solid black;
+// }
+
+.container:nth-child(2) div[class*="col"] {
+    background-color: greenyellow;
+    
+}
+
+.mt-5 {
+    margin-top: 15% !important;
+}
+
+.mt-4 {
+    margin-top: 5% !important;
+}
+
+// p {
+   //position: absolute;
+    //top: 55%;
+    //left: 50%; // 0 
+//}

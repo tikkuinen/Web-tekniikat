@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: aqua !important;
+}
+
+.container:nth-child(2) {
+  background-color: green;
+  height: 100vh;
+  height: calc(100vh - 58px);
+}
+
+body {
+  background-color: green;
+}
+
+p {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+.container:nth-child(2) div[class*=col] {
+  background-color: greenyellow;
+}
+
+.mt-5 {
+  margin-top: 15% !important;
+}
+
+.mt-4 {
+  margin-top: 5% !important;
+}
+
+/*# sourceMappingURL=styles.css.map */
