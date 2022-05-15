@@ -1,33 +1,61 @@
+$highlight-green: #63AD26;
+$background-color: #CDFFA4;
+$button-highlight: #9C46A3;
+
 * {
     box-sizing: border-box;
 }
 
 .navbar {
-    background-color: aqua !important;
-}
-
-// sivun koko korkeus
-.container:nth-child(2) {
-    background-color: green;
-    height: 100vh;
-    height: calc(100vh - 58px); // vähän epäilyttävä korjaus, en tiedä teenkö
-    
+    background-color: $highlight-green !important;
+    li {
+        padding-left: 0px; // pitäis saada vain siinä desktopissa
+    }
 }
 
 // taustaväri tai kuva
 body {
-    background-color: green;
+    background-color: $background-color;
 }
 
-.container .row:last-child {
+// sivun koko korkeus
+.container:nth-child(2) {
+    height: 100vh;
+    height: calc(100vh - 58px); // vähän epäilyttävä korjaus, en tiedä teenkö
     
 }
-
-p {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2em;
-    text-align: center;
+.row:first-child {
+    margin: 10px;
+    //min-height: 200px;
+    div {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    p {
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 1.7em;
+        text-align: center;
+    }
 }
+.row:last-child {
+    margin: 10px;
+    div[class*="col"] { // jätänkö tähän tällasen vaan, että olis käytetty niitä?
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        //font-size: 2em;
+        text-align: justify;
+    }
+    button {
+        background-color: $button-highlight;
+    }
+}
+
+
+
+
 
 
 
@@ -37,7 +65,7 @@ p {
 // }
 
 .container:nth-child(2) div[class*="col"] {
-    background-color: greenyellow;
+    background-color: #63AD26;
     
 }
 
@@ -46,7 +74,7 @@ p {
 }
 
 .mt-4 {
-    margin-top: 5% !important;
+    margin-top: 25px !important;
 }
 
 // p {
@@ -54,3 +82,5 @@ p {
     //top: 55%;
     //left: 50%; // 0 
 //}
+
+// About-sivun omat muotoilut
