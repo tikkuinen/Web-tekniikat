@@ -7,12 +7,12 @@ const MEDIUMRESULT = "Meni tosi hyvin, saat näin ison palan kakkua!";
 const POORRESULT = "Harmi, tarvitset lisää harjoittelua. Saat kuitenkin pienen palan kakkua!";
 
 // Kuvat 
-const YES = '<img src="../images/tiia/yes.png" alt="correct" class="img-fluid">';
-const NO = '<img src="../images/tiia/no.png" alt="wrong" class="img-fluid">';
+const YES = '<img src="../sivusto/images/yes.png" alt="correct" class="img-fluid">';
+const NO = '<img src="../sivusto/images/no.png" alt="wrong" class="img-fluid">';
 
-const SMALLCAKE = '<img src="../images/tiia/smallcake.png" alt="small_cake" class="img-fluid">';
-const MEDIUMCAKE = '<img src="../images/tiia/mediumcake.png" alt="medium_cake" class="img-fluid">';
-const BIGCAKE = '<img src="../images/tiia/bigcake.png" alt="big_cake" class="img-fluid">';
+const SMALLCAKE = '<img src="../sivusto/images/smallcake.png" alt="small_cake" class="img-fluid">';
+const MEDIUMCAKE = '<img src="../sivusto/images/mediumcake.png" alt="medium_cake" class="img-fluid">';
+const BIGCAKE = '<img src="../sivusto/images/bigcake.png" alt="big_cake" class="img-fluid">';
 
 // haettu W3Schools-sivustolta 22.4.2022 https://www.w3schools.com/JS/js_random.asp
 function getRndInteger(min, max) {
@@ -21,7 +21,7 @@ function getRndInteger(min, max) {
 
 // Pelin osille luodaan muuttujat
 let instructions = document.getElementById("instructions");
-let imageBox = document.getElementById("image-box");
+let imageBox = document.getElementById("img-box");
 let question = document.getElementById("question");
 
 let answerSection = document.getElementById("answer");
