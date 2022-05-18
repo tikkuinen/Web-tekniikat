@@ -1,4 +1,8 @@
 @charset "UTF-8";
+div[class*=col], p, * {
+  border: 1px solid black;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -63,12 +67,21 @@ body {
   text-align: justify;
 }
 .row:last-child button {
-  font-weight: bold;
   color: #000000;
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
   background-color: #9C46A3;
   border: 5px solid #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#buttons button {
+  color: #000000;
+  background-color: #9C46A3;
+  border: 5px solid #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .mt-5 {
@@ -117,11 +130,14 @@ h1 {
   padding-top: 20px;
   margin-bottom: 20px;
   text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
 }
 
 #game-container {
   height: 80vh;
   background-color: #63AD26;
+  margin-top: 10px;
 }
 
 /* Yläosa eli ohjekenttä, kysymyskenttä ja tuloskuva */
@@ -145,6 +161,10 @@ h1 {
   gap: 20px;
   margin-bottom: 4px;
 }
+#img-box #rightness {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
 #img-box #answer-image img {
   height: 50px;
   width: auto;
@@ -155,7 +175,7 @@ h1 {
 #answer {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 34px;
   margin-bottom: 20px;
 }
 #answer #answer-field {
@@ -167,6 +187,10 @@ h1 {
 /* Laskurin sijoitus oikealle */
 #counter-section {
   text-align: right;
+}
+#counter-section span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 /* Nappiosion muotoilut */
@@ -180,11 +204,15 @@ h1 {
   justify-content: center;
   width: 100%;
   height: 50px;
-  text-transform: uppercase;
-  border-radius: 15px;
 }
 
 #start {
+  color: #000000;
+  background-color: #9C46A3;
+  border: 5px solid #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
   min-width: 75%;
 }
 
@@ -222,10 +250,10 @@ h1 {
 /* Virhekentän muotoilut */
 .error {
   background-color: lightcoral;
-  border: 1px solid red;
-  border-radius: 15px;
 }
 .error span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   padding: 5px;
 }
 
@@ -233,31 +261,25 @@ h1 {
 /* Tekstikenttien yhteiset muotoilut */
 #instructions, #question, #result {
   background-color: #E9A1F0;
-  margin-top: 30px;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 10px solid #9C46A3;
 }
 
 /* Omat responsiviisuusmuotoilut */
 @media screen and (max-width: 1300px) {
-  footer {
-    height: 30px;
-  }
-
   #check, #next {
     margin-top: 20px;
   }
 }
 @media screen and (max-width: 480px) {
-  footer {
-    height: 25px;
-  }
-
   #game-container {
-    margin-top: 0px;
+    margin-top: 1px;
     height: 90vh;
   }
 
   h1 {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
 
   #check, #next {

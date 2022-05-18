@@ -66,7 +66,7 @@
                 </div>
                 <!-- Aloita-nappi -->
                 <div>
-                    <button class="btn btn-dark mx-auto" id="start" type="button">Aloita</button>
+                    <button class="btn btn-dark" id="start" type="button">Aloita</button>
                 </div>
                 <!-- VASTAUSKENTTÄALUE -->
                 <div id="answer" class= "game-part d-none">
@@ -83,7 +83,7 @@
             <div class="col-11 col-sm-9 col-lg-5 mx-auto">
                 <!-- napit -->
                 <div id="buttons">
-                    <button class="btn btn-dark disabled" id="check" type="button">Tarkista</button>
+                    <button class="btn btn-dark disabled" id="check">Tarkista</button>
                     <button class="btn btn-dark disabled" id="next" type="button">Seuraava</button>
                 </div>
             </div>
@@ -94,9 +94,7 @@
             <div id="result-box" class="col-11 col-sm-9 col-lg-5 mx-auto">
                 <div id="result">
                     <span id="result-text">tulokset</span>
-                    <p id="result-img">
-                        <!-- And then there will be cake -->
-                    </p>
+                    <p id="result-img"></p>
                 </div>
             </div>
         </div>
@@ -104,8 +102,8 @@
 
         <!-- class="d-grid gap-2 col-sm-8 mx-auto"> -->
         <!-- UUDELLEEN -->
-        <div class="row end-part d-none">
-            <div class="col-12 col-sm-9 col-lg-5 mx-auto">
+        <div class="row end-part justify-content-center d-none">
+            <div class="col-12 col-sm-9 col-lg-5">
                 <button class="btn btn-dark" id="again" type="button" onclick="window.location.reload(true)">Yritä uudelleen</button>
             </div>
         </div>

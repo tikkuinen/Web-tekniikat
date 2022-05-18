@@ -128,7 +128,7 @@ function checkAnswer() {
     checkButton.classList.add("disabled");
     answerField.value = "";
 
-    if (counter > 9) {
+    if (counter > 2) { // oli ysi
         nextButton.innerText = "Tulokset";
         nextButton.removeEventListener("click", checkAnswer);
         nextButton.addEventListener("click", showResults); 
