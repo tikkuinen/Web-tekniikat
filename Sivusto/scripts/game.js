@@ -71,7 +71,7 @@ answerField.oninput = function() {
 }
 
 /*
-Funktio nextQuestion toimii kun painetaan seuraava-nappia. Funktio tyhjentää kaiken edeltävän tiedon, ja luo uuden kysymyksen. For-loopilla tehdään tarkistus, että sama numero ei tule arvotuksi kahdella peräkkäisellä kerralla. Samalla laskuri laskee kuinka moneen tehtävään on vastattu. Lisäksi tämä funktio disabloi seuraava-napin, jotta sitä ei voi painaa ennen laskun tarkistamista.
+Funktio nextQuestion toimii kun painetaan seuraava-nappia. Funktio tyhjentää kaiken edeltävän tiedon, ja luo uuden kysymyksen. Laskuri laskee kuinka moneen tehtävään on vastattu. Lisäksi tämä funktio disabloi seuraava-napin, jotta sitä ei voi painaa ennen laskun tarkistamista.
 */
 function nextQuestion() {
     answerField.value = "";

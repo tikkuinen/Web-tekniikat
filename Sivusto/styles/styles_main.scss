@@ -14,7 +14,6 @@ $black-background: #000000;
     font-size: 1em;
 }
 
-// tää tulee vissiin sinne naviin
 @mixin header-style {
     font-weight: bold;
     color: $black-background;
@@ -32,24 +31,16 @@ $black-background: #000000;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-// laita muuttujat ja mixinit järkevästi
-
-//wild-card bordereille
-// div[class*="col"], p, * {
-//     border: 1px solid black;
-// }
-
 
 * {
     box-sizing: border-box;
 }
 
+// Navbar ja sen ikoni
 .navbar {
     background-color: $highlight-green !important;
     li {
         @include header-style();
-        padding-left: 0px; // pitäis saada vain siinä desktopissa
-
     }
     p {
         background-color: $black-background;
@@ -64,16 +55,13 @@ $black-background: #000000;
     }  
 }
 
-// taustaväri tai kuva
+// Koko sivun taustaväri
 body {
     background-color: $background-color;
 }
 
-// sivun koko korkeus
+// Ikoniosio
 .container:nth-child(2) {
-    //height: 80vh;
-    //height: calc(100vh - 58px); // vähän epäilyttävä korjaus, en tiedä teenkö
-    //background-color: $highlight-green;
     div[class*="col"] {
         background-color: $highlight-green;
         i {
@@ -86,9 +74,9 @@ body {
     }
 }
 
+// Etusivun yläosa
 .row:first-child {
     margin: 10px;
-    //min-height: 200px;
     div {
         padding-top: 15px;
         padding-bottom: 15px;
@@ -98,26 +86,21 @@ body {
         text-align: center;
     }
 }
+
+// Etusivun alaosa
 .row:last-child {
     margin: 10px;
-    div[class*="col"] { // jätänkö tähän tällasen vaan, että olis käytetty niitä?
+    div[class*="col"] {
         padding-top: 15px;
         padding-bottom: 15px;
     }
     p {
         font-family: 'Oswald', sans-serif;
-        //font-family: Arial, Helvetica, sans-serif;
-        //font-size: 1.2em;
         text-align: justify;
     }
     button {
         @include button-style();
     }
-}
-
-// pelisivun buttonien tyyli
-#buttons button {
-    @include button-style();
 }
 
 // välit mihin tulee etusivulla siis
@@ -129,7 +112,8 @@ body {
     margin-top: 25px !important;
 }
 
-// about sivun
+// ABOUT
+// About-sivun omakuva
 #image-box {
     border: 10px solid $button-highlight;
     img {
@@ -141,6 +125,7 @@ body {
     }
 }
 
+// About-sivun esittelyt accordionissa
 .accordion-item {
     background-color: $button-highlight;
     .accordion-body {
@@ -161,26 +146,21 @@ body {
     }
 }
 
+// GAME
+// Pelin taustaboksi
+#game-container {
+    height: 80vh;
+    background-color: $highlight-green;
+    margin-top: 10px;
+}
 
-
-
-
-// GAMEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-
-
-/* Tekstit, joissa ulkoinen fontti */
+/* Pelin otsikkomuotoilu */
 h1 {
     padding-top: 20px;
     margin-bottom: 20px;
     text-align: center;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
-}
-
-#game-container {
-    height: 80vh;
-    background-color: $highlight-green;
-    margin-top: 10px;
 }
 
 /* Yläosa eli ohjekenttä, kysymyskenttä ja tuloskuva */
@@ -193,7 +173,7 @@ h1 {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 20px;
-    font-size: 1.2em;  // tähänkö fs fonttikoko
+    font-size: 1.2em;
 }
 
 #img-box {
@@ -238,6 +218,9 @@ h1 {
 #buttons {
     display: flex;
     gap: 20px;
+    button {
+        @include button-style();
+    }
 }
 
 #start, #check, #next, #again {
@@ -283,6 +266,10 @@ h1 {
     }
 }
 
+#try-again {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
 
 /* Virhekentän muotoilut */
 .error {
@@ -294,22 +281,25 @@ h1 {
     }
 }
 
-
-/* Kuvien muotoilut, tarkistuskuva ja tuloskuva */
-
-
-
-
 /* Tekstikenttien yhteiset muotoilut */
 #instructions, #question, #result {
     @include question-style();
 }
 
-
 /* Omat responsiviisuusmuotoilut */
 @media screen and (max-width: 1300px) {
+    #game-container {
+        margin-top: 1px;
+        height: 90vh;
+    }
+
     #check, #next {
         margin-top: 20px;
+    }
+
+    #try-again {
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
 }
 
@@ -328,6 +318,11 @@ h1 {
     }
 
     #game-box {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    #try-again {
         padding-top: 0px;
         padding-bottom: 0px;
     }

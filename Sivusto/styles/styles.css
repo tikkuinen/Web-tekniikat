@@ -10,7 +10,6 @@
   font-weight: bold;
   color: #000000;
   font-family: Arial, Helvetica, sans-serif;
-  padding-left: 0px;
 }
 .navbar p {
   background-color: #000000;
@@ -72,16 +71,6 @@ body {
   font-size: 1em;
 }
 
-#buttons button {
-  color: #000000;
-  background-color: #9C46A3;
-  border: 5px solid #000000;
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1em;
-}
-
 .mt-5 {
   margin-top: 15% !important;
 }
@@ -123,19 +112,19 @@ body {
   background-image: url(../images/purple.png);
 }
 
-/* Tekstit, joissa ulkoinen fontti */
+#game-container {
+  height: 80vh;
+  background-color: #63AD26;
+  margin-top: 10px;
+}
+
+/* Pelin otsikkomuotoilu */
 h1 {
   padding-top: 20px;
   margin-bottom: 20px;
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-weight: bold;
-}
-
-#game-container {
-  height: 80vh;
-  background-color: #63AD26;
-  margin-top: 10px;
 }
 
 /* Yläosa eli ohjekenttä, kysymyskenttä ja tuloskuva */
@@ -196,6 +185,15 @@ h1 {
   display: flex;
   gap: 20px;
 }
+#buttons button {
+  color: #000000;
+  background-color: #9C46A3;
+  border: 5px solid #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+}
 
 #start, #check, #next, #again {
   margin-top: 40px;
@@ -246,6 +244,11 @@ h1 {
   margin-top: 20px;
 }
 
+#try-again {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 /* Virhekentän muotoilut */
 .error {
   background-color: lightcoral;
@@ -256,7 +259,6 @@ h1 {
   padding: 5px;
 }
 
-/* Kuvien muotoilut, tarkistuskuva ja tuloskuva */
 /* Tekstikenttien yhteiset muotoilut */
 #instructions, #question, #result {
   background-color: #E9A1F0;
@@ -267,8 +269,18 @@ h1 {
 
 /* Omat responsiviisuusmuotoilut */
 @media screen and (max-width: 1300px) {
+  #game-container {
+    margin-top: 1px;
+    height: 90vh;
+  }
+
   #check, #next {
     margin-top: 20px;
+  }
+
+  #try-again {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -286,6 +298,11 @@ h1 {
   }
 
   #game-box {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  #try-again {
     padding-top: 0px;
     padding-bottom: 0px;
   }
