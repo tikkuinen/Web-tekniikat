@@ -1,8 +1,4 @@
 @charset "UTF-8";
-div[class*=col], p, * {
-  border: 1px solid black;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -175,7 +171,7 @@ h1 {
 #answer {
   display: flex;
   justify-content: center;
-  margin-top: 34px;
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 #answer #answer-field {
@@ -284,6 +280,11 @@ h1 {
 
   #check, #next {
     margin-top: 0px;
+  }
+
+  #game-box {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 

@@ -34,9 +34,9 @@ $black-background: #000000;
 // laita muuttujat ja mixinit järkevästi
 
 //wild-card bordereille
-div[class*="col"], p, * {
-    border: 1px solid black;
-}
+// div[class*="col"], p, * {
+//     border: 1px solid black;
+// }
 
 
 * {
@@ -216,7 +216,7 @@ h1 {
 #answer {
     display: flex;
     justify-content: center;
-    margin-top: 34px;
+    margin-top: 30px;
     margin-bottom: 20px;
     #answer-field {
         border-radius: 15px;
@@ -326,8 +326,8 @@ h1 {
         margin-top: 0px;
     }
 
-//     .row:first-child div {
-//         padding-top: 0px;
-//         padding-bottom: 0px;
-//     }
+    #game-box {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
 }
