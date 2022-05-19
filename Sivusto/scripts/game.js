@@ -1,10 +1,10 @@
 // Virheilmoitukset ja tulosilmoitukset
-const ERRORNUM = "Syötä vain numeroita!";
-const ERRORLENGTH = "Syötä vain yksi numero!";
+const ERRORNUM = "Insert only numbers!";
+const ERRORLENGTH = "Insert one or two numbers!";
 
-const BESTRESULT = "Onnea! Pärjäsit niin hyvin, että saat kokonaisen kakun!";
-const MEDIUMRESULT = "Meni tosi hyvin, saat näin ison palan kakkua!";
-const POORRESULT = "Harmi, tarvitset lisää harjoittelua. Saat kuitenkin pienen palan kakkua!";
+const BESTRESULT = "Congratulations! You get a full cake!";
+const MEDIUMRESULT = "You did very well, here's a big piece of cake for you ";
+const POORRESULT = "Too bad, you need more practice. You can have a small piece of cake!";
 
 // Kuvat 
 const YES = '<img src="../sivusto/images/yes.png" alt="correct" class="img-fluid">';
@@ -45,6 +45,7 @@ checkButton.addEventListener("click", checkAnswer);
 let counter = 1;
 let rightCounter = 0;
 let firstNumber = 0;
+let secondNumber = 0;
 
 /*
 Funktion startGame aloittaa pelin aloita-napista. Se piilottaa samalla aloita-napin ja ohjeet, ja tuo näkyviin pelin muut osat. Funktio myös arpoo ensimmäisen kysymyksen luvun ja tulostaa sen kysymyskenttään.
@@ -60,6 +61,7 @@ function startGame() {
     }
 
     firstNumber = getRndInteger(1,9);
+    secondNumber = getRndInteger(1,9);
     printCalc();
 }
 
@@ -73,18 +75,15 @@ Funktio nextQuestion toimii kun painetaan seuraava-nappia. Funktio tyhjentää k
 */
 function nextQuestion() {
     answerField.value = "";
-    let currentNumber = getRndInteger(1,9);
 
-    for (let i = 0; firstNumber == currentNumber; i++) {
-        currentNumber = getRndInteger(1,9);
-    }
-    firstNumber = currentNumber;
+    firstNumber = getRndInteger(1,9);
+    secondNumber = getRndInteger(1,9);
     printCalc();
     
     imageBox.classList.add("d-none");
     answerSection.classList.remove("d-none");
     counter++;
-    counterSpan.textContent = "Kysymys " + counter + "/" + 10;
+    counterSpan.textContent = "Question " + counter + "/" + 10;
     nextButton.classList.add("disabled");
 }
 
@@ -93,7 +92,7 @@ Funktio checkAnswer toimii kun painetaan tarkista-napppia. Tämä funktio tarkis
 */
 function checkAnswer() {
     let input = answerField.value;
-    let answer = 10 - firstNumber;
+    let answer = firstNumber + secondNumber;
 
     if (isNaN(input) === true) {
         showError();
@@ -102,7 +101,7 @@ function checkAnswer() {
         return;
     }
     
-    if (input.length > 1) {
+    if (input.length > 2) {
         showError();
         rightnessCheck.textContent = ERRORLENGTH;
         answerField.value = "";
@@ -111,14 +110,14 @@ function checkAnswer() {
         
     if (input == answer) {
         showCheckResult();
-        rightnessCheck.textContent = "Oikein!";
+        rightnessCheck.textContent = "Correct!";
         answerImage.innerHTML = YES;
         rightCounter++;
         answerSection.classList.add("d-none"); 
         
     } else {
         showCheckResult();
-        rightnessCheck.textContent = "Väärin, oikea vastaus on " + answer + " !";
+        rightnessCheck.textContent = "Wrong, the right answer is " + answer + "!";
         answerImage.innerHTML = NO;
         answerField.value = "";
         answerSection.classList.add("d-none");
@@ -129,9 +128,9 @@ function checkAnswer() {
     answerField.value = "";
 
     if (counter > 9) {
-        checkButton.innerText = "Tulokset";
-        checkButton.removeEventListener("click", checkAnswer);
-        checkButton.addEventListener("click", showResults); 
+        nextButton.innerText = "Results";
+        nextButton.removeEventListener("click", checkAnswer);
+        nextButton.addEventListener("click", showResults); 
     }
 }
 
@@ -165,7 +164,7 @@ function showResults() {
 
 // Tämä funktio tulostaa kysymyskenttään uuden kysymyksen.
 function printCalc() {
-    question.innerHTML = "Mikä luku puuttuu?" + "<br>" + firstNumber + " + " + " ? = " + 10;
+    question.innerHTML = firstNumber + " + " + secondNumber + " = " + "?";
 }
 
 // Tämä funktio näyttää virheviestin eli piilottaa ja näyttää osia, sekä lisää error-luokan.

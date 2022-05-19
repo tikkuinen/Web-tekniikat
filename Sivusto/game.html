@@ -50,14 +50,12 @@
         <div class="row">
             <div id="game-box" class="col-12 col-sm-9 col-lg-5 mx-auto">
                 <!-- Yläosa eli otsikko ja kysymyskenttä -->
-                <h1>Kymppiparit</h1>
+                <h1>Addition</h1>
                 <div id="instructions"> 
-                    <!-- tännekin koot fs -->
-                    Tässä pelissä testataan kymppipareja! Mikä luku puuttuu, jotta kymppipari tulee täyteen?
-                    Paina nappia aloittaaksesi ja onnea peliin!
+                    Here you can train your addition skills.
+                    Press on the button below to start. Good luck!
                 </div>
                 <div id="question" class="game-part d-none">
-                    Kumpi voittaa, Chuck Norris vai karhu?
                 </div>
                 <div id="img-box" class="d-none">
                     <span id="rightness" class="d-none"></span>
@@ -66,14 +64,14 @@
                 </div>
                 <!-- Aloita-nappi -->
                 <div>
-                    <button class="btn btn-dark" id="start" type="button">Aloita</button>
+                    <button class="btn btn-dark" id="start" type="button">Start</button>
                 </div>
                 <!-- VASTAUSKENTTÄALUE -->
                 <div id="answer" class= "game-part d-none">
                     <input type="text" class="form-control-lg" id="answer-field">
                 </div>
                 <div id="counter-section" class= "game-part d-none">
-                    <span id="counter">Kysymys 1/10</span>
+                    <span id="counter">Question 1/10</span>
                 </div>
             </div>
         </div>
@@ -83,8 +81,8 @@
             <div class="col-11 col-sm-9 col-lg-5 mx-auto">
                 <!-- napit -->
                 <div id="buttons">
-                    <button class="btn btn-dark disabled" id="check">Tarkista</button>
-                    <button class="btn btn-dark disabled" id="next">Seuraava</button>
+                    <button class="btn btn-dark disabled" id="check">Check</button>
+                    <button class="btn btn-dark disabled" id="next">Next</button>
                 </div>
             </div>
         </div>
@@ -93,7 +91,7 @@
         <div class="row end-part d-none">
             <div id="result-box" class="col-11 col-sm-9 col-lg-5 mx-auto">
                 <div id="result">
-                    <span id="result-text">tulokset</span>
+                    <span id="result-text">Results</span>
                     <p id="result-img"></p>
                 </div>
             </div>
@@ -104,7 +102,7 @@
         <!-- UUDELLEEN -->
         <div class="row end-part justify-content-center d-none">
             <div class="col-12 col-sm-9 col-lg-5">
-                <button class="btn btn-dark" id="again" type="button" onclick="window.location.reload(true)">Yritä uudelleen</button>
+                <button class="btn btn-dark" id="again" type="button" onclick="window.location.reload(true)">Try again</button>
             </div>
         </div>
     </div>
