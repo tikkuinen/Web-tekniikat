@@ -9,6 +9,3 @@ The techniques include:
 -Sass
 
 Author: Tiia Lindell
-
-
-
